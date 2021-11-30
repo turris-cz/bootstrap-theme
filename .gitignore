@@ -1,0 +1,8 @@
+.*
+!.gitignore
+
+bootstrap-*
+bootswatch-*
+
+/*.scss
+!/turris.scss
