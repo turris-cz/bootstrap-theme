@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" id="light-scheme-icon" href="favicon-black.png">
-	<link rel="icon" id="dark-scheme-icon" href="favicon-white.png">
-	<link rel="stylesheet" id="css-dark" href="darkly-5.min.css" media="(prefers-color-scheme: dark)">
-	<link rel="stylesheet" id="css-light" href="flatly-5.min.css" media="(prefers-color-scheme: light)">
-	<script src="darkmode.js"></script>
-	<title>Turris Theme test page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" id="light-scheme-icon" href="favicon-black.png">
+    <link rel="icon" id="dark-scheme-icon" href="favicon-white.png">
+    <link rel="stylesheet" id="css-dark" href="darkly-5.min.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" id="css-light" href="flatly-5.min.css" media="(prefers-color-scheme: light)">
+    <script src="darkmode_head.js"></script>
+    <title>Turris Theme test page</title>
 </head>
 <body>
 
-	<!-- THE START OF BOOTSTRAP CHEATSHEET -->
+    <!-- THE START OF BOOTSTRAP CHEATSHEET -->
     <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
       <div class="container-fluid d-flex align-items-center">
         <h1 class="d-flex align-items-center fs-4 text-white mb-0">
@@ -26,6 +26,13 @@
         </form>
       </div>
     </header>
+
+    <picture>
+        <source name="dark" srcset="logo-white.svg" media="(prefers-color-scheme: dark)">
+        <source name="light" srcset="logo-black.svg" media="(prefers-color-scheme: light)">
+        <img name="img" src="logo-black.svg" alt="Turris Logo" width="280">
+    </picture>
+
     <div class="bd-cheatsheet container-fluid">
       <section id="content">
         <article class="my-3" id="typography">
@@ -1537,8 +1544,8 @@
         </div>
       </div>
     </div>
-	<!-- THE END OF BOOTSTRAP CHEATSHEET -->
+    <!-- THE END OF BOOTSTRAP CHEATSHEET -->
 
-	<script async src="darkmode_switch.js"></script>
+    <script async src="darkmode_body.js"></script>
 </body>
 </html>

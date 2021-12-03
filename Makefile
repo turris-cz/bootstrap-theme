@@ -18,8 +18,9 @@ all:
 .PHONY: install
 install:
 	install -d '$(INSTALL_DIR)'
+	install -m 644 darkmode_head.js darkmode_body.js '$(INSTALL_DIR)'
 	install -m 644 favicon-black.png favicon-white.png '$(INSTALL_DIR)'
-	install -m 644 darkmode.js darkmode_switch.js '$(INSTALL_DIR)'
+	install -m 644 logo-black.svg logo-white.svg '$(INSTALL_DIR)'
 
 .PHONY: clean
 clean::
