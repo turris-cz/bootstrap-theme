@@ -72,10 +72,10 @@ all: $(1)-$(2).css $(1)-$(2).min.css
 ifeq ($(NO_BUILD),n)
 
 $(1)-$(2).scss: $$(BOOTSTRAP_$(2)_DIR) $$(BOOTSWATCH_$(2)_DIR) turris.scss
-	echo '@import "$$(BOOTSWATCH_$(2)_DIR)/dist/$(1)/variables";' >$$@
+	echo '@import "turris.scss";' >$$@
+	echo '@import "$$(BOOTSWATCH_$(2)_DIR)/dist/$(1)/variables";' >>$$@
 	echo '@import "$$(BOOTSTRAP_$(2)_DIR)/scss/bootstrap";' >>$$@
 	echo '@import "$$(BOOTSWATCH_$(2)_DIR)/dist/$(1)/bootswatch";' >>$$@
-	echo '@import "turris.scss";' >>$$@
 
 $(1)-$(2).css $(1)-$(2).css.map: $(1)-$(2).scss
 	sass '$$<' '$$@'
