@@ -6,3 +6,5 @@ bootswatch-*
 
 /*.scss
 !/turris.scss
+
+/node_modules
