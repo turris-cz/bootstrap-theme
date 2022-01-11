@@ -78,10 +78,10 @@ $(1)-$(2).scss: $$(BOOTSTRAP_$(2)_DIR) $$(BOOTSWATCH_$(2)_DIR) turris.scss
 	echo '@import "$$(BOOTSWATCH_$(2)_DIR)/dist/$(1)/bootswatch";' >>$$@
 
 $(1)-$(2).css $(1)-$(2).css.map: $(1)-$(2).scss
-	sass '$$<' '$$@'
+	npx sass '$$<' '$$@'
 
 $(1)-$(2).min.css $(1)-$(2).min.css.map: $(1)-$(2).scss
-	sass -t compressed '$$<' '$$@'
+	npx sass '$$<' '$$@' --style compressed
 
 endif
 
