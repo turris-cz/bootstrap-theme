@@ -15,6 +15,11 @@ BOOTSWATCH_5_HASH := d7cb1d53d6ea9dece25fd582afb2fa1f20b57efecc6fddbe7727cb792ed
 all:
 	@
 
+.PHONY: prepare
+prepare:
+	@which npm >/dev/null || ( echo "Please install npm (apt install npm)" >&2; false )
+	npm install
+
 .PHONY: install
 install:
 	install -d '$(INSTALL_DIR)'
