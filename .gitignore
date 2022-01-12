@@ -8,3 +8,4 @@ bootswatch-*
 !/turris.scss
 
 /node_modules
+package-lock.json
