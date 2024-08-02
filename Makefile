@@ -2,10 +2,6 @@ MAKEFLAGS += --no-builtin-rules
 INSTALL_DIR ?= installation
 NO_BUILD ?= n
 
-BOOTSTRAP_4_RELEASE := 6.2
-BOOTSTRAP_4_HASH := 7f5c2d164d028c3d3f8d950dd458d48f652e2a0a7f99075f4ac2c4498085592c
-BOOTSWATCH_4_HASH := f2dc5275373721bcf033e618e274286e67eee9a2ec89fbb489b8318751a23a0b
-
 BOOTSTRAP_5_RELEASE := 3.3
 BOOTSTRAP_5_HASH := 3809d5580cb4735087c445d52c5db1626aef9bab8b7f86d2644d1a2acab7e54b
 BOOTSWATCH_5_HASH := 022a1e3b10318cbabc73a20c272e49daef40ccab12d8da0c6663b214697d1f44
@@ -68,7 +64,6 @@ clean::
 	rm -rf '$$(BOOTSTRAP_$(1)_DIR)' '$$(BOOTSWATCH_$(1)_DIR)'
 
 endef
-$(eval $(call BOOTSTRAP,4))
 $(eval $(call BOOTSTRAP,5))
 
 
@@ -105,6 +100,5 @@ clean::
 	rm -f '$(1)-$(2).min.css' '$(1)-$(2).min.css.map'
 
 endef
-$(eval $(call THEME,flatly,4))
 $(eval $(call THEME,flatly,5))
 
