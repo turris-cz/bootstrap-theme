@@ -107,5 +107,4 @@ clean::
 endef
 $(eval $(call THEME,flatly,4))
 $(eval $(call THEME,flatly,5))
-$(eval $(call THEME,darkly,5))
-$(eval $(call THEME,darkly,4))
+
