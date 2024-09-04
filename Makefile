@@ -2,13 +2,9 @@ MAKEFLAGS += --no-builtin-rules
 INSTALL_DIR ?= installation
 NO_BUILD ?= n
 
-BOOTSTRAP_4_RELEASE := 6.1
-BOOTSTRAP_4_HASH := 689088e453944f47bdd769a7fba6fa3495d4cf2412118f024a6525f525028598
-BOOTSWATCH_4_HASH := ed17a0d402cb9e9c2e8fd6c93974ce127f8e565b868e172f832bec9376319a84
-
-BOOTSTRAP_5_RELEASE := 1.3
-BOOTSTRAP_5_HASH := 55b951db46e1d69b4236494122fe559716a76c4b8a418c11f3fed6abc2d4de3f
-BOOTSWATCH_5_HASH := d7cb1d53d6ea9dece25fd582afb2fa1f20b57efecc6fddbe7727cb792ed84e0a
+BOOTSTRAP_5_RELEASE := 3.3
+BOOTSTRAP_5_HASH := 3809d5580cb4735087c445d52c5db1626aef9bab8b7f86d2644d1a2acab7e54b
+BOOTSWATCH_5_HASH := 022a1e3b10318cbabc73a20c272e49daef40ccab12d8da0c6663b214697d1f44
 
 
 .PHONY: all
@@ -23,8 +19,8 @@ prepare:
 .PHONY: install
 install:
 	install -d '$(INSTALL_DIR)'
-	install -m 644 darkmode_head.js darkmode_body.js '$(INSTALL_DIR)'
-	install -m 644 favicon-black.png favicon-white.png '$(INSTALL_DIR)'
+	install -m 644 color-modes.js '$(INSTALL_DIR)'
+	install -m 644 favicon-black.png favicon-white.png favicon.ico '$(INSTALL_DIR)'
 	install -m 644 logo-black.svg logo-white.svg '$(INSTALL_DIR)'
 	install -m 644 bootstrap.bundle.js bootstrap.bundle.js.map '$(INSTALL_DIR)'
 	install -m 644 bootstrap.bundle.min.js bootstrap.bundle.min.js.map '$(INSTALL_DIR)'
@@ -68,7 +64,6 @@ clean::
 	rm -rf '$$(BOOTSTRAP_$(1)_DIR)' '$$(BOOTSWATCH_$(1)_DIR)'
 
 endef
-$(eval $(call BOOTSTRAP,4))
 $(eval $(call BOOTSTRAP,5))
 
 
@@ -105,7 +100,5 @@ clean::
 	rm -f '$(1)-$(2).min.css' '$(1)-$(2).min.css.map'
 
 endef
-$(eval $(call THEME,flatly,4))
 $(eval $(call THEME,flatly,5))
-$(eval $(call THEME,darkly,5))
-$(eval $(call THEME,darkly,4))
+
