@@ -1,6 +1,6 @@
 {
     "name": "bootstrap-theme",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "description": "Common Turris Bootstrap theme for web applications based on Bootstrap and Boostwatch theme Flatly and Darkly.",
     "repository": {
         "type": "git",
